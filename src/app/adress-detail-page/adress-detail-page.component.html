@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="container mt-5">
+        <div class="mx-auto">
+            <h3><u>Checking Out Product</u></h3><br><br>
+            <hr>
+            <i aria-hidden="true" class="fa fa-credit-card "></i>
+            <hr>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table border="3" cellpadding="3" class="table table-hover table-stripped  mr-5">
+        <thead>
+            <tr class="table-primary">
+                <th>Item</th>
+                <th>ItemName</th>
+                <th>ItemPrice</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cartItem">
+                <img src="assets/images/{{item.imagePath}}" alt="image" class="ml-3">
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><b><i>TotalAmount</i></b></td>
+                <td><b><i>&#x20B9;{{totalAmount}}</i></b></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><b><i>10% CGST</i></b></td>
+                <td><b><i>&#x20B9;{{cgst}}</i></b></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><b><i>10%SGST</i></b></td>
+                <td><b><i>&#x20B9;{{sgst}}</i></b></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><i><b>10%Discount</b></i></td>
+                <td><b><i>&#x20B9;{{discount}}</i></b></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><b><i>Net Amount</i></b></td>
+                <td><b><i>&#x20B9;{{netAmount}}</i></b></td>
+            </tr>
+            <br>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-success ">Pay Now</button>
+</div>

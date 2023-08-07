@@ -17,16 +17,14 @@ export class AuthServComponent {
   error = false;
   errorMsg = 'any';
   isLoading = false;
-  constructor(private authserv: AuthServicesService){}
+  constructor(private authserv: AuthServicesService) { }
   formAdded(addForm: NgForm) {
     const email = addForm.value.email;
     const password = addForm.value.password;
     console.log(addForm);
-
     addForm.reset();
     this.isLoading = true;
     this.authserv.signingUpForm(email, password).subscribe(dataResponse => {
-
       console.log(dataResponse);
       this.error = false;
       this.success = true;
@@ -36,35 +34,18 @@ export class AuthServComponent {
         'You are successfully registerd.',
         'success'
       )
-
-
-
     },
-    errorMeesage =>{
-      this.error=true,
-     this.success=false 
-     this.errorMsg=errorMeesage
-     this.isLoading=false
-    
-     }
-
-
-
+      errorMeesage => {
+        this.error = true,
+          this.success = false
+        this.errorMsg = errorMeesage
+        this.isLoading = false
+      }
     )
-
   }
-
-
-
-
   changeMode() {
     this.register = !this.register
-
-
   }
-
-
-
 }
 
 

@@ -1,1 +1,47 @@
-<p>shopping-cart works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div *ngIf="cartItem.length > 0">
+                <h1 class="invoice"><u>Shopping Card Items</u></h1>
+            </div>
+            <div class="card" *ngFor="let item of cartItem">
+                <img class="card-img-top" src="assets/images/{{item.imagePath}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Smart Phones</h5>
+                    <h3>{{item.name}}</h3>
+                    <h6 class="card-text"><b>&#x20B9;{{item.price}}</b></h6>
+                    <p>{{item.description}}</p>
+                    <i class="fas fa-eye mr-3" (click)="deleteItem(item)"></i>
+                    <i class="fas fa-trash-alt" (click)="viewItem(item)"></i>
+                </div>
+            </div>
+            <br>
+        </div>
+        <span class="col-md-4 float-right mt-5 " *ngIf="cartItem.length > 0">
+            <ul class="list-group" *ngFor="let cart of cartItem">
+                <li class="list-group-item">{{cart.name}} - {{cart.price}}</li>
+                <br>
+            </ul>
+            <button type="button" class="btn btn-primary check" (click)="continueShipping()">Continue
+                Shopping
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-outline-success check" (click)="checkOut()">Checkout</button>
+        </span>
+    </div>
+</div>
+<div class="container">
+    <div class="mx-auto">
+        <div *ngIf="cartItem.length == 0" class="mt-5">
+            <h1>Opps..!! <br>No Product Found in Cart</h1>
+            <p>Please Add products to cart</p>
+            <button type="button" class="btn btn-primary ml-3" (click)="takeMeHome()">Take Me Home</button>
+            <button type="button" class="btn btn-outline-success ml-3" (click)="ourProduct()">Our Product</button>
+            <br>
+            <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="http://www.youtube.com"> <i class="fab fa-youtube"></i></a>
+            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>

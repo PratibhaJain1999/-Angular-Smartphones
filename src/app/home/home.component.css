@@ -7,18 +7,6 @@
 .carousel{
     position: relative
 }
-.carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    list-style: none;
-}
 .carousel .carousel-control-prev-icon {
     color: blue;
 }

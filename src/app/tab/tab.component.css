@@ -1,0 +1,10 @@
+ul{
+    list-style: none;
+}
+h1{
+    text-align: center;
+    color: darkblue;
+    font-family: cursive;
+    text-decoration: double;
+    border-radius: 20px;
+}

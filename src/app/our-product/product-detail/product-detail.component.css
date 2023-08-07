@@ -1,0 +1,49 @@
+.card-img-top{
+    width: 350px;
+    height: 150px;
+    padding: 7px;
+    cursor: pointer;
+}
+.card{
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 25px;
+
+}
+button{
+    width: 100px;
+}
+img{
+    float: right;
+    height: 45%;
+    border-radius: 10px;
+    margin-right: 40px;
+
+}
+.container{
+    font-family: cursive;
+}
+h4{
+    color: darkblue;
+}
+h5{
+    color: darkgreen;
+}
+h6{
+    color:lightcoral;
+}
+.category{
+    color: hotpink;
+}
+.quantity{
+ color: darkmagenta;
+}
+.price{
+ color: deeppink;
+}
+.type{
+   color: indigo;
+}
+.cart{
+    text-align: center;
+}

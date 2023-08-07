@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="container mt-5">
+        <h4>Product Details</h4>
+        <hr>
+        <h5><b>Product Name: </b> {{details[0].name}}</h5>
+        <span>
+            <img src="assets/images/{{details[0].imagePath}}">
+            <h6><b>Product Description :</b> {{details[0].description}}</h6><br>
+            <div class="mx-auto">
+                <span class="category"> <b>Category:</b> {{details[0].category}}</span>
+                <br><br>
+                <span class="quantity"> <b>No of Quantity Available:</b> {{details[0].noOfQuantity}}</span>
+                <br><br>
+                <span class="type">
+                    <b>Type of Phone :{{details[0].type}}</b>
+                </span> <br>
+                <span class="price">
+                    <b>Price of product :{{details[0].price}}</b>
+                </span> <br>
+            </div>
+        </span>
+        <br><br>
+        <button type="button" class="btn btn-primary mr-5" (click)="backToPage()">Back</button>
+        <button type="button" class="btn btn-success cart " (click)="addToCart()">AddToCart</button>
+    </div>
+</div>
+
+
+=

@@ -1,0 +1,26 @@
+<app-tab></app-tab>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto" *ngFor="let item of filterBtn">
+            <div class="card" (click)="openDetails(item.id)">
+                <div class="img-container">
+                    <img src="assets/images/{{item.imagePath}}" alt="image" class="card-img-top  shadow store-img">
+                    <h2>SmartPhones</h2>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <h4 class=" item-name justify-content-between text-capitalize"><b><i>{{item.name}}</i></b></h4>
+                         <hr>
+                        <h5 class="float-right">
+                            <span><i><b>&#x20B9;</b></i></span>
+                            <span><b><i> {{item.price}}</i></b></span>
+                            <i class="fas fa-shopping-cart ml-3" (click)="addCartItems(item,$event)"></i>
+
+                        </h5>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

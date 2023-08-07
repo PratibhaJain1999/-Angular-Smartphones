@@ -10,10 +10,15 @@
 input.ng-valid.ng-touched{
     border: 3px solid darkgreen;
     box-shadow: 0 0 22px lightgreen inset;
-
 }
-
 .form{
      text-align: center;
      width: 50%;
 }
+.form-control{
+    width: 400px;
+}
+.register{
+    width: 150px;
+}
+

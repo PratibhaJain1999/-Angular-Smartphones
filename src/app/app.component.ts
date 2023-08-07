@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CommonService } from './product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +9,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Smartphones';
-  tabSelected='';
+  constructor(private router:Router, private productServ:CommonService){}
+  tabssSelected='';
+  filterrBtn: any;
   navigateTab(event:any){
  console.log(event);
- this.tabSelected=event;
+ this.tabssSelected=event;
   }
+  tabsSelected(type:any){
+    this.filterrBtn=type;
+    console.log(type);
+    this.productServ.setValueBtn(this.filterrBtn);
+   
+    
+}
+
  
 }

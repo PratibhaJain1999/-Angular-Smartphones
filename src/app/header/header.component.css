@@ -1,5 +1,5 @@
-.navbar-header{
-    color: white;
+.navbar-expand{
+    color: white; background-color: #e91e63;
 }
 i{
     color: white;
@@ -7,4 +7,10 @@ i{
 #itemsCount{
     background-color: darkblue;
     font-size: 15px;
+}
+.nav .nav-link{
+    color: white;
+}
+.nav .navbar-nav{
+    color: white;
 }

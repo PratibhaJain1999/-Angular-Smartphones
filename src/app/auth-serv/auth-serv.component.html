@@ -1,65 +1,42 @@
-
-<div class="container MT-5">
+<div class="container mt-5">
     <div class="row">
         <div class="mx-auto">
             <div style="text-align: center;">
-                <div class="spinner-border text-success" role="status"  *ngIf="isLoading">
-                    <span >Loading...</span>
-                  </div>            
+                <div class="spinner-border text-success" role="status" *ngIf="isLoading">
+                    <span>Loading...</span>
                 </div>
+            </div>
             <form (ngSubmit)="formAdded(addForm)" #addForm="ngForm" class="mt-5" *ngIf="!isLoading">
                 <div class="alert-danger alert" *ngIf="error">
-                    <p >{{errorMsg}}</p>
-                    
+                    <p>{{errorMsg}}</p>
                 </div>
                 <div class="alert-success alert" *ngIf="success">
                     <p>User registered successfully..!!</p>
-                    
                 </div>
-             
-                <div class="col-xs-8">
-                        <label>Email:</label>
-                        <input type="email" 
-                        name="email" 
-                        id="email" 
-                        ngModel
-                        required
-                        #email="ngModel"
-                        class="form-control"
+                <div class="col-xs-12">
+                    <label>Email:</label>
+                    <input type="email" name="email" id="email" ngModel required #email="ngModel" class="form-control"
                         placeholder="Enter Email">
-                        <span class="defective-blocks" *ngIf="email.status=='INVALID' && email.touched"> Please enter a correct email.</span>
-  
-                    </div>
-                    <br>
-                    <div class="col-xs-8">
-                        <label>Password:</label>
-                        <input type="password" 
-                         name="password"
-                         id="password"
-                          ngModel
-                          required 
-                          #password="ngModel"
-                          class="form-control"
-                          placeholder="Enter Password">
-                          <span class="defective-blocks" *ngIf="password.status=='INVALID' && password.touched"> Please enter a correct password.</span>
-  
-                    </div>
-                    <br>
-                
-               
-                      <span>
-                        <button type="submit" class="btn btn-success" [disabled]="addForm.status=='INVALID'">{{register? 'Register':'Login'}}</button>
-                        |
-                        <button type="button" class="btn btn-primary" (click)="changeMode()"> Switch to {{register ? 'Login' : 'Register'}} </button>
-                      </span>
-                    <!-- </div> -->
-                   
-                
-                
+                    <span class="defective-blocks" *ngIf="email.status=='INVALID' && email.touched"> Please enter a
+                        correct email.</span>
+                </div>
+                <br>
+                <div class="col-xs-12">
+                    <label>Password:</label>
+                    <input type="password" name="password" id="password" ngModel required #password="ngModel"
+                        class="form-control" placeholder="Enter Password">
+                    <span class="defective-blocks" *ngIf="password.status=='INVALID' && password.touched"> Please enter
+                        a correct password.</span>
+                </div>
+                <br>
+                <span>
+                    <button type="submit" class="btn btn-success register"
+                        [disabled]="addForm.status=='INVALID'">{{register? 'Register':'Login'}}</button>
+                    |
+                    <button type="button" class="btn btn-primary login" (click)="changeMode()"> Switch to {{register ?
+                        'Login' : 'Register'}} </button>
+                </span>
             </form>
-            
-  
         </div>
-        </div>
-  </div>
-  
+    </div>
+</div>
