@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3" >
     <div class="row">
         <div class="col-md-8">
             <div *ngIf="cartItem.length > 0">
@@ -7,7 +7,7 @@
             <div class="card" *ngFor="let item of cartItem">
                 <img class="card-img-top" src="assets/images/{{item.imagePath}}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Smart Phones</h5>
+                    <h3 class="card-title">Smart Phones</h3>
                     <h3>{{item.name}}</h3>
                     <h6 class="card-text"><b>&#x20B9;{{item.price}}</b></h6>
                     <p>{{item.description}}</p>
